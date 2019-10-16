@@ -4,7 +4,7 @@
   <center>
     <div class="crop_modal_dimensions"></div>
     <%= image_tag object.send(field).url, class: 'cropping_image', data: {
-      object_class: object.class.to_s.underscore,
+      object_class: "asset",
       object_id: object.id,
       crop_field: field,
       jcropper_url: jcropper_url(object) ,
