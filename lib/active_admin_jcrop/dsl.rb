@@ -4,6 +4,7 @@ module ActiveAdminJcrop
     def jcropable
       member_action :jcropper, method: :put do
         @event = resource
+        puts @event
         @event.assets.active_admin_crop! params[:image_data]
         
         respond_to do |format|
