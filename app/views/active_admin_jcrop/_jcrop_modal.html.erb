@@ -7,7 +7,7 @@
       object_class: "asset",
       object_id: object.id,
       crop_field: field,
-      jcropper_url: jcropper_url(object) ,
+      jcropper_url: jcropper_url(object.assets.first) ,
       translate_save_cropped_image: I18n.t("active_admin.crop.save_cropped_image").titleize,
       translate_cancel: I18n.t("active_admin.crop.cancel").titleize,
       jcrop_options: jcrop_options.to_json
