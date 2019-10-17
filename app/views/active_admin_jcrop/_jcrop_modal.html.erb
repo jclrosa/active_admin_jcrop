@@ -3,9 +3,9 @@
 <%= content_tag :div, class: "crop_modal_content" do %>
   <center>
     <div class="crop_modal_dimensions"></div>
-    <%= image_tag object.send(field).url, class: 'cropping_image', data: {
+    <%= image_tag object.assets.first.send(field).url, class: 'cropping_image', data: {
       object_class: "asset",
-      object_id: object.id,
+      object_id: object.assets.first.id,
       crop_field: field,
       jcropper_url: jcropper_url(object) ,
       translate_save_cropped_image: I18n.t("active_admin.crop.save_cropped_image").titleize,
