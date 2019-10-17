@@ -3,7 +3,7 @@ module ActiveAdminJcrop
     
     def jcropable
       member_action :jcropper, method: :put do
-        Asset.find(resource.id).active_admin_crop! params[:image_data]
+        Asset.find(params[:image_data][:object_id]).active_admin_crop! params[:image_data]
         
         respond_to do |format|
           format.js { render json: true }
